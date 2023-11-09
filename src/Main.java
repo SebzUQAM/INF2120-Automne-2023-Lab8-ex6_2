@@ -16,5 +16,19 @@ public class Main {
                 System.out.println(file.defiler());
             }catch (FileVide e){}
         }
+
+        file.enfiler(5);
+        file.enfiler(6);
+        file.enfiler(7);
+        file.enfiler(8);
+        file.enfiler(9);
+        file.enfiler(10);
+        file.enfiler(11);
+
+        while (!file.estVide()){
+            try {
+                System.out.println(file.defiler());
+            }catch (FileVide e){}
+        }
     }
 }
