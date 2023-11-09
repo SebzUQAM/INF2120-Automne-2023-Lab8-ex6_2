@@ -22,7 +22,7 @@ public class File<T> {
         if(laTaille == 0){
             throw new FileVide();
         }
-        return first.getValeur();
+        return first.valeur;
     }
 
     public void enfiler(T value) {
@@ -37,8 +37,13 @@ public class File<T> {
     }
 
     public T defiler() throws FileVide {
+        if(estVide()){
+            throw new FileVide();
+        }
         T resultat = first.valeur;
-        return null;
+        first = first.droite;
+        laTaille--;
+        return resultat;
     }
 
     private class Node{
@@ -47,18 +52,6 @@ public class File<T> {
 
         public Node(T valeur) {
             this.valeur = valeur;
-        }
-
-        public T getValeur() {
-            return valeur;
-        }
-
-        public Node getDroite() {
-            return droite;
-        }
-
-        public void setDroite(Node droite) {
-            this.droite = droite;
         }
     }
 }
