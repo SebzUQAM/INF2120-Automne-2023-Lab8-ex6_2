@@ -52,12 +52,9 @@ public class File<T> {
     }
 
     public T defiler() throws FileVide {
-        if(estVide()){
-            // si la file est vide on ne peut pas retourner quelque chose
-            throw new FileVide();
-        }
         // on reprend la valeur encapsuler dans le premier noeud
-        T resultat = first.valeur;
+        // dans tete() on a un throw new FileVide()
+        T resultat = tete();
         // on met le noeud à la droite du premier à la place du premier
         // le garbage collector va prendre l'ancien noeud first, car il n'est
         // plus dans une variable
