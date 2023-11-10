@@ -64,6 +64,10 @@ public class File<T> {
         first = first.droite;
         // on décremente, car on a un élément de moins
         laTaille--;
+        if(estVide()){
+            // Si la file est vide alors le dernier élément deviens également null
+            last = null;
+        }
         // On retourne l'élément qui était dans le premier noeud et non le noeud
         // lui même
         return resultat;

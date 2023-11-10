@@ -11,6 +11,7 @@ public class Main {
         file.enfiler(7);
         file.enfiler(8);
 
+        System.out.println();
         while (!file.estVide()){
             try {
                 System.out.println(file.defiler());
@@ -25,6 +26,33 @@ public class Main {
         file.enfiler(10);
         file.enfiler(11);
 
+        System.out.println();
+        while (!file.estVide()){
+            try {
+                System.out.println(file.defiler());
+            }catch (FileVide e){}
+        }
+
+        file.enfiler(1);
+        file.enfiler(2);
+        file.enfiler(3);
+        file.enfiler(4);
+        file.enfiler(5);
+        file.enfiler(6);
+
+        System.out.println();
+        try {
+            System.out.println(file.defiler());
+            System.out.println(file.defiler());
+        }catch (FileVide e){}
+
+        file.enfiler(7);
+        file.enfiler(8);
+        file.enfiler(9);
+        file.enfiler(10);
+
+
+        System.out.println();
         while (!file.estVide()){
             try {
                 System.out.println(file.defiler());
